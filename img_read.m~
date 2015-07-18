@@ -1,0 +1,116 @@
+function P = img_read(i,j)
+
+sz = num2str(j);
+img = num2str(i);
+if j==512
+    name = strcat('phantom_',img,'.png');
+else
+    name = strcat('phantom_',img,'_',im'',);
+end
+if i==1
+    if j==512
+        P = imread('phantom_1.png');
+    elseif j==256
+        P = imread('phantom_1_256x256.png');
+    elseif j==128
+        P = imread('phantom_1_128x128.png');
+    elseif j==64
+        P = imread('phantom_1_64x64.png');
+    elseif j==32
+        P = imread('phantom_1_32x32.png');
+    elseif j==16
+        P = imread('phantom_1_16x16.png');
+    elseif j==8
+        P = imread('phantom_1_8x8.png');
+    end
+elseif i==2
+    if j==512
+        P = imread('phantom_2.png');
+    elseif j==256
+        P = imread('phantom_2_256x256.png');
+    elseif j==128
+        P = imread('phantom_2_128x128.png');
+    elseif j==64
+        P = imread('phantom_2_64x64.png');
+    elseif j==32
+        P = imread('phantom_2_32x32.png');
+    elseif j==16
+        P = imread('phantom_2_16x16.png');
+    elseif j==8
+        P = imread('phantom_2_8x8.png');
+    end
+    elseif i==3
+    if j==512
+        P = imread('phantom_3.png');
+    elseif j==256
+        P = imread('phantom_3_256x256.png');
+    elseif j==128
+        P = imread('phantom_3_128x128.png');
+    elseif j==64
+        P = imread('phantom_3_64x64.png');
+    elseif j==32
+        P = imread('phantom_3_32x32.png');
+    elseif j==16
+        P = imread('phantom_3_16x16.png');
+    elseif j==8
+        P = imread('phantom_3_8x8.png');
+    end
+    elseif i==4
+    if j==512
+        P = imread('phantom_4.png');
+    elseif j==256
+        P = imread('phantom_4_256x256.png');
+    elseif j==128
+        P = imread('phantom_4_128x128.png');
+    elseif j==64
+        P = imread('phantom_4_64x64.png');
+    elseif j==32
+        P = imread('phantom_4_32x32.png');
+    elseif j==16
+        P = imread('phantom_4_16x16.png');
+    end
+    elseif i==5
+    if j==512
+        P = imread('phantom_5.png');
+    elseif j==256
+        P = imread('phantom_5_256x256.png');
+    elseif j==128
+        P = imread('phantom_5_128x128.png');
+    elseif j==64
+        P = imread('phantom_5_64x64.png');
+    elseif j==32
+        P = imread('phantom_5_32x32.png');
+    elseif j==16
+        P = imread('phantom_5_16x16.png');
+    elseif j==8
+        P = imread('phantom_5_8x8.png');
+    end
+    elseif i==6
+    if j==512
+        P = imread('phantom_6.png');
+    elseif j==256
+        P = imread('phantom_6_256x256.png');
+    elseif j==128
+        P = imread('phantom_6_128x128.png');
+    elseif j==64
+        P = imread('phantom_6_64x64.png');
+    elseif j==32
+        P = imread('phantom_6_32x32.png');
+    elseif j==16
+        P = imread('phantom_6_16x16.png');
+    end
+    elseif i==7
+    if j==512
+        P = imread('phantom_7.png');
+    elseif j==256
+        P = imread('phantom_7_256x256.png');
+    elseif j==128
+        P = imread('phantom_7_128x128.png');
+    elseif j==64
+        P = imread('phantom_7_64x64.png');
+    elseif j==32
+        P = imread('phantom_7_32x32.png');
+    elseif j==16
+        P = imread('phantom_7_16x16.png');
+    end
+end

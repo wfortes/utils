@@ -1,0 +1,23 @@
+function str = initialize
+
+str.delta_rel = [];
+str.delta_abs = [];
+str.maxpert = [];
+str.R = [];
+str.M = [];
+str.Rr = [];
+str.s = [];
+str.V = [];
+str.V1 = [];
+str.V2 = [];
+str.wpix = [];
+str.maxpert = [];
+str.sv = [];
+str.npix = [];
+str.vari = [];
+str.rel_error_noiseless = [];
+str.N_proj=[];
+str.measure_1=[];
+str.measure_2=[];
+str.upp_norm_xbin = [];
+str.invader = [];
