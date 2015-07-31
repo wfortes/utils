@@ -1,27 +1,12 @@
-function [r b ordb Ix d] = round2binary(R)
+function [r, b, ordb, Ix] = round2binary(vector)
+%ROUND2BINARY rounds each entry of VECTOR to its nearest binary value
+%   R is the binary vector closest to VECTOR in the l2 norm
+%   B is a vector of increments for switching an entry of VECTOR
+%   ORDB is sorted B in ascending order
+%   IX is the index of B ordered as ORDB
+%
+% Wagner Fortes 2014/2015 wfortes@gmail.com
 
-% round to the nearest binary vector
-% r is the binary vector
-% b is a vector of increment for switching an entry of r
-% ordb is b ordered by crescent values
-% Ix is the index of b ordered as ordb
-% d=R-r
-
-r=min(max(round(R),0),1);
-b = abs(2*R-1);
-d=R-r;
+r = min(max(round(vector),0),1);
+b = abs(2*vector-1);
 [ordb,Ix] = sort(b);
-
-% old version
-% % ra = round(R);
-% for i=1:size(R,1)
-% %      d(i,1) = min(abs(R(i)),abs(R(i)-1)); % d=abs(R-r);
-%     b(i,1) = abs(2*R(i)-1);
-%     if abs(R(i))>abs(R(i)-1)
-%         r(i,1)=1;
-%     else
-%         r(i,1)=0;
-%     end
-% end
-% d=R-r;
-% [ordb,Ix] = sort(b);

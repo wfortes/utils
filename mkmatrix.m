@@ -1,25 +1,17 @@
  function W = mkmatrix(M,N,dir_a,dir_b)
- % W modifications
-%  dir_a = ones(dir_cnt,1);
-%  ang_sp = linspace(0,(dir_cnt-1)*pi/dir_cnt,dir_cnt);
-%  dir_b = tan(ang_sp);
- %%%%%%%%%%%%%%%%%
- 
- 
+%MKMATRIX creates a binary projection matrix based on the grid model
+% N is the number of columns in image
+% M is the number of rows in image
 % Directions are of the form (a,b). For example, if the directions are
 % (1,0) and (1, -1), then dir_a = [1 1] and dir_b = [0 -1]
 % dir_a = [1 0];
 % dir_b = [0 1];
-% [dir_a,dir_b]=mkdirvecs(sum_max);
+% also obtained from [dir_a,dir_b]= mkdirvecs(maxi);
+%
+% Wagner Fortes 2014/2015 wfortes@gmail.com
 
 % number of directions
-% dir_cnt = 2;
 dir_cnt = size(dir_a,2);
-
-% number of columns in image
-% N = 20;
-% number of rows in image
-% M = 20;
 
 % current row in projection matrix (equation index)
 current_row = 0;
@@ -59,9 +51,3 @@ col_list = col_list(1:current_index);
 
 % create sparse projection matrix
 W = sparse(row_list, col_list, ones(1,current_index),current_row,M*N);
-
-% cleanup
-row_list = [];
-col_list = [];
-
-% optional: WD = full(W);  will create a dense projection matrix
